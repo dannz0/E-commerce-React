@@ -18,11 +18,7 @@ const Sidebar = () => {
       >
         <div className='sidebar-header'>
           <img src={logo} alt='comfy sloth' className='logo' />
-          <button
-            className='close-btn'
-            type='button'
-            onClick={() => closeSidebar(!isSidebarOpen)}
-          >
+          <button className='close-btn' type='button' onClick={closeSidebar}>
             <FaTimes />
           </button>
         </div>
@@ -32,7 +28,9 @@ const Sidebar = () => {
 
             return (
               <li key={id}>
-                <Link to={url}>{text}</Link>
+                <Link to={url} onClick={closeSidebar}>
+                  {text}
+                </Link>
               </li>
             );
           })}
