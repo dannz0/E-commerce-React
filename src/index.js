@@ -26,6 +26,7 @@ root.render(
         <FilterProvider>
           <CartProvider>
             <App />
+          </CartProvider>
         </FilterProvider>
       </ProductsProvider>
     </UserProvider>
